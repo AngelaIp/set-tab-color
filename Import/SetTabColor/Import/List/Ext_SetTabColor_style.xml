@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="List" id="4B01F1EE70324162A1DF1CEBEB121F05" action="add">
+  <name>Ext_SetTabColor_style</name>
+  <Relationships>
+   <Item type="Value" id="71ED6D284E794990BBCC7B299EDAB44A" action="add">
+    <label xml:lang="en">full</label>
+    <sort_order>1</sort_order>
+    <source_id keyed_name="Ext_SetTabColor_style" type="List">4B01F1EE70324162A1DF1CEBEB121F05</source_id>
+    <value>background-color: </value>
+   </Item>
+   <Item type="Value" id="D6408BA1177E4CA682BC0A7FC1DE65C0" action="add">
+    <label xml:lang="en">underline</label>
+    <sort_order>2</sort_order>
+    <source_id keyed_name="Ext_SetTabColor_style" type="List">4B01F1EE70324162A1DF1CEBEB121F05</source_id>
+    <value>border-bottom: 2px solid </value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

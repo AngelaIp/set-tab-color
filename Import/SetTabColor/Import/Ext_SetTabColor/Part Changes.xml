@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="Ext_SetTabColor" id="B2742DCFC2484C629445295180618C00" action="add">
+  <ext_item keyed_name="Part" type="ItemType" name="Part">4F1AC04A2B484F3ABA4E20DB63808A88</ext_item>
+  <ext_tab_behavior>static</ext_tab_behavior>
+  <ext_tab_color>#c0c0c0</ext_tab_color>
+  <ext_tab_style>border-bottom: 2px solid </ext_tab_style>
+  <ext_tab_name keyed_name="Part Changes" type="RelationshipType">199974B1330640319AD3A39569359E7B</ext_tab_name>
+ </Item>
+</AML>

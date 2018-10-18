@@ -11,7 +11,8 @@
     <sort_order>128</sort_order>
     <source_id keyed_name="Ext_SetTabColor" type="Form">90E893157D8C491FB973AD242AB831D0</source_id>
     <Relationships>
-     <Item type="Field" id="1EE6ECD4C99D4634A980206201044285" action="add">
+     <Item type="Field" id="CC44E96D340E45D598C686DC682DCD95" action="add">
+      <bg_color>beige  </bg_color>
       <border_width>0</border_width>
       <display_length_unit>px</display_length_unit>
       <field_type>item</field_type>
@@ -21,19 +22,63 @@
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label xml:lang="en">Ext_Item</label>
+      <label xml:lang="en">Item</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <propertytype_id keyed_name="ext_item" type="Property">DA5C22D4C2E54FC6A269391D4864B656</propertytype_id>
-      <sort_order>128</sort_order>
+      <sort_order>1408</sort_order>
       <source_id keyed_name="BD5599B981B346F7AD6A0F7583F65133" type="Body">BD5599B981B346F7AD6A0F7583F65133</source_id>
       <tab_index>10</tab_index>
       <tab_stop>1</tab_stop>
-      <x>190</x>
+      <x>200</x>
       <y>10</y>
       <name>ext_item</name>
      </Item>
-     <Item type="Field" id="48DF33EF70FF45839AE9162E572974D6" action="add">
+     <Item type="Field" id="5035D687D8C742D7B55ACAADF65F8787" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Behavior</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="ext_tab_behavior" type="Property">6FE0C0746D694BC3B2C2D24E65DEBF69</propertytype_id>
+      <sort_order>1280</sort_order>
+      <source_id keyed_name="BD5599B981B346F7AD6A0F7583F65133" type="Body">BD5599B981B346F7AD6A0F7583F65133</source_id>
+      <tab_index>50</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>200</x>
+      <y>90</y>
+      <name>ext_tab_behavior</name>
+     </Item>
+     <Item type="Field" id="3C60DD96034E43BDB21522A5877D089D" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>color</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-seri</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Tab Color</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="ext_tab_color" type="Property">E80EFA982EC24705BF8C27BF1E130604</propertytype_id>
+      <sort_order>1792</sort_order>
+      <source_id keyed_name="BD5599B981B346F7AD6A0F7583F65133" type="Body">BD5599B981B346F7AD6A0F7583F65133</source_id>
+      <tab_index>30</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>400</x>
+      <y>89</y>
+      <name>ext_tab_color</name>
+     </Item>
+     <Item type="Field" id="309FA7D853364F77B8DAC039C4650127" action="add">
       <border_width>0</border_width>
       <display_length_unit>px</display_length_unit>
       <field_type>color</field_type>
@@ -43,61 +88,90 @@
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label xml:lang="en">Ext_tab_color</label>
-      <label_position>top</label_position>
-      <list_no_blank>0</list_no_blank>
-      <propertytype_id keyed_name="ext_tab_color" type="Property">E80EFA982EC24705BF8C27BF1E130604</propertytype_id>
-      <sort_order>384</sort_order>
-      <source_id keyed_name="BD5599B981B346F7AD6A0F7583F65133" type="Body">BD5599B981B346F7AD6A0F7583F65133</source_id>
-      <tab_index>30</tab_index>
-      <tab_stop>1</tab_stop>
-      <x>190</x>
-      <y>90</y>
-      <name>ext_tab_color</name>
-     </Item>
-     <Item type="Field" id="6F245AE197AA430890BB1008E570B183" action="add">
-      <border_width>0</border_width>
-      <display_length_unit>px</display_length_unit>
-      <field_type>color</field_type>
-      <font_color>#000000</font_color>
-      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
-      <font_size>8pt</font_size>
-      <font_weight>bold</font_weight>
-      <is_disabled>0</is_disabled>
-      <is_visible>1</is_visible>
-      <label xml:lang="en">ext_tab_font_color</label>
+      <label xml:lang="en">Font Color</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <propertytype_id keyed_name="ext_tab_font_color" type="Property">E9818977B9D148B6B2A28AAF3CE69728</propertytype_id>
-      <sort_order>640</sort_order>
+      <sort_order>1664</sort_order>
       <source_id keyed_name="BD5599B981B346F7AD6A0F7583F65133" type="Body">BD5599B981B346F7AD6A0F7583F65133</source_id>
       <tab_index>40</tab_index>
       <tab_stop>1</tab_stop>
-      <x>335</x>
-      <y>90</y>
+      <x>400</x>
+      <y>130</y>
       <name>ext_tab_font_color</name>
      </Item>
-     <Item type="Field" id="6257AE9A027740C3A748EB0FC10E4D5C" action="add">
+     <Item type="Field" id="4439F8D451314D5AA58BE2AF25B6E95F" action="add">
+      <bg_color>beige  </bg_color>
       <border_width>0</border_width>
       <display_length_unit>px</display_length_unit>
       <field_type>item</field_type>
       <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-seri</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Tab Name</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="ext_tab_name" type="Property">3384EA7CE97E4FC69CDBD57E86F8EDCE</propertytype_id>
+      <sort_order>1536</sort_order>
+      <source_id keyed_name="BD5599B981B346F7AD6A0F7583F65133" type="Body">BD5599B981B346F7AD6A0F7583F65133</source_id>
+      <tab_index>20</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>200</x>
+      <y>50</y>
+      <name>ext_tab_name</name>
+     </Item>
+     <Item type="Field" id="49D9A71C400E4C7C846D9675BA0CF981" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
       <font_family>arial, helvetica, sans-serif</font_family>
       <font_size>8pt</font_size>
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label xml:lang="en">Ext_tab_name</label>
+      <label xml:lang="en">Style</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
-      <propertytype_id keyed_name="ext_tab_name" type="Property">3384EA7CE97E4FC69CDBD57E86F8EDCE</propertytype_id>
-      <sort_order>256</sort_order>
+      <propertytype_id keyed_name="ext_tab_style" type="Property">71FC97578D75438D9FB6F67C14BE6F71</propertytype_id>
+      <sort_order>1152</sort_order>
       <source_id keyed_name="BD5599B981B346F7AD6A0F7583F65133" type="Body">BD5599B981B346F7AD6A0F7583F65133</source_id>
-      <tab_index>20</tab_index>
+      <tab_index>60</tab_index>
       <tab_stop>1</tab_stop>
-      <x>190</x>
-      <y>50</y>
-      <name>ext_tab_name</name>
+      <x>200</x>
+      <y>130</y>
+      <name>ext_tab_style</name>
+     </Item>
+     <Item type="Field" id="6A5BACB27AE941BBBF6A31BA3809163F" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<b>Behavior 'static'</b></br>
+Recommended for Relationships Views like 'BOM Structure', 'Chances' and TGVs</br>
+Tab color and style used in example: Lightgrey (#c0c0c0), underline</br>
+(Regular Lightgrey (#d3d3d3) matches the original color, but is hard to separate...)
+</br>
+</br>
+<b>Behavior 'dynamic'</b></br>
+Recommended for regular relationships like 'BOM', 'Costs', 'AML'</br>
+Tab color and style used in example: Solidgrey (#808080), underline]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1024</sort_order>
+      <source_id keyed_name="BD5599B981B346F7AD6A0F7583F65133" type="Body">BD5599B981B346F7AD6A0F7583F65133</source_id>
+      <tab_stop>1</tab_stop>
+      <x>600</x>
+      <y>15</y>
+      <name>hints</name>
      </Item>
      <Item type="Field" id="5B039BC065C9488DA2F30FB747D1C634" action="add">
       <display_length_unit>px</display_length_unit>

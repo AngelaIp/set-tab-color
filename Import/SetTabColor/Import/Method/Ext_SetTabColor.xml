@@ -3,6 +3,7 @@
   <comments />
   <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
   <method_code><![CDATA[// Updates relationship tabs based on the tab styles defined via Ext_SetTabColor items
+
 function changeTabColor() {
     if (!parent.relationships) {
         setTimeout(changeTabColor, 50);
@@ -22,29 +23,70 @@ function changeTabColor() {
     itm_ItemType.setProperty("name", itemName);
     
     itm_color.setPropertyItem("ext_item", itm_ItemType);
-    itm_color.setAttribute("select", "ext_item,ext_tab_color,ext_tab_name(name,label),ext_tab_font_color");
+    itm_color.setAttribute("select", "ext_item,ext_tab_color,ext_tab_name(name,label),ext_tab_font_color,ext_tab_behavior,ext_tab_style");
     itm_color = itm_color.apply("get");
     
     if (itm_color.isError() || itm_color.getItemCount() === 0) {
         return this;
     }
 
-    // set style of each tab with a configuration item
-    for (var i = 0; i < itm_color.getItemCount(); i++) {
-        var itm = itm_color.getItemByIndex(i);
-        
-        // build style string from configuration item
-        var style = "";
-        style = "background-color:" + itm.getProperty("ext_tab_color", "#FFFFFF") + ";";
-        style += "color: " + itm.getProperty("ext_tab_font_color", "") + ";";
+    // Separate static and dynamic tabs
+    var dynamicTabs =  itm_color.getItemsByXPath("//Item[@type='Ext_SetTabColor'][ext_tab_behavior='dynamic']"); 
+    var staticTabs =  itm_color.getItemsByXPath("//Item[@type='Ext_SetTabColor'][ext_tab_behavior='static']"); 
+    // alert ("Dynamic Tabs = " + dynamicTabs.getItemCount() + " , Static Tabs = " + staticTabs.getItemCount());
 
-        // get the relationshiptype id from the configuration item
-        var relId = itm.getProperty("ext_tab_name", "");
-        
-        // get the tab element using the relationship id
-        var tab = rel_dom.querySelector('li[data-id="' + relId + '"]');
-        tab.setAttribute("style", style);
+    // Check for dynamic content
+    var query = "<AML><Item type='" + itemName + "' action='get' select='id'>"; 
+    query += "<id>" + document.thisItem.getID() + "</id>";
+    query += "<Relationships>";
+    for (var i = 0; i < dynamicTabs.getItemCount(); i++) {
+        // build array
+        var reltype = dynamicTabs.getItemByIndex(i).getPropertyAttribute("ext_tab_name","keyed_name");
+        query += "<Item type='" + reltype + "' action='get' select='id' maxRecords='1' />";
     }
+    query += "</Relationships></Item></AML>";
+
+    var structure = inn.applyAML(query);
+
+    // Color dynamic tabs
+    for (var d = 0; d < dynamicTabs.getItemCount(); d++) {
+        var dynTab = dynamicTabs.getItemByIndex(d);
+        var dynRelType = dynTab.getPropertyAttribute("ext_tab_name","keyed_name");
+        // var relId = dynTab.getProperty("ext_tab_name"); // ging nicht
+        // alert("Dynamic No. " + d + ": " + dynRelType );
+        var rels =  structure.getItemsByXPath("//Item/Relationships/Item[@type='" + dynRelType + "']"); 
+        var count = rels.getItemCount();
+        // alert("Debug: " + dynRelType + "  " + rels.getItemCount()); // zeige ausgewertete Struktur
+        if (count !== 0) { // relationship has content
+            var dynStyle = dynTab.getProperty("ext_tab_style") + dynTab.getProperty("ext_tab_color", "#FFFFFF") + ";";
+            dynStyle += "color: " + dynTab.getProperty("ext_tab_font_color", "") + ";";
+         
+            // get the relationshiptype id from the configuration item
+            var dynRelId = dynTab.getProperty("ext_tab_name", "");
+   
+            // get the tab element using the relationship id
+            var dynTabEl = rel_dom.querySelector('li[data-id="' + dynRelId + '"]');
+            dynTabEl.setAttribute("style", dynStyle);
+        } 
+        
+    }
+
+    // Color static tabs
+    for (var s = 0; s < staticTabs.getItemCount(); s++) {
+        var statTab = staticTabs.getItemByIndex(s);
+        var statRelType = statTab.getPropertyAttribute("ext_tab_name","keyed_name");
+        // alert("Static No. " + s + ": " + statRelType );
+        var statStyle = statTab.getProperty("ext_tab_style") + statTab.getProperty("ext_tab_color", "#FFFFFF") + ";";
+        statStyle += "color: " + statTab.getProperty("ext_tab_font_color", "") + ";";
+         
+        // get the relationshiptype id from the configuration item
+        var statRelId = statTab.getProperty("ext_tab_name", "");
+   
+        // get the tab element using the relationship id
+        var statTabEl = rel_dom.querySelector('li[data-id="' + statRelId + '"]');
+        statTabEl.setAttribute("style", statStyle);
+    }
+    
 }
 
 changeTabColor();]]></method_code>

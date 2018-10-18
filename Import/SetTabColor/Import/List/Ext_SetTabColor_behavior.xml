@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="List" id="B626F3FBC58E41BC9064E54C50C7082F" action="add">
+  <name>Ext_SetTabColor_behavior</name>
+  <Relationships>
+   <Item type="Value" id="C20E133D749F448D84A4A39383FE4D24" action="add">
+    <label xml:lang="en">Static</label>
+    <sort_order>1</sort_order>
+    <source_id keyed_name="Ext_SetTabColor_behavior" type="List">B626F3FBC58E41BC9064E54C50C7082F</source_id>
+    <value>static</value>
+   </Item>
+   <Item type="Value" id="6F8F926B63E240678C67347191B177BC" action="add">
+    <label xml:lang="en">Dynamic</label>
+    <sort_order>2</sort_order>
+    <source_id keyed_name="Ext_SetTabColor_behavior" type="List">B626F3FBC58E41BC9064E54C50C7082F</source_id>
+    <value>dynamic</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

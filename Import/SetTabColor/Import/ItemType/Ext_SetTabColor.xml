@@ -29,15 +29,35 @@
     <is_indexed>0</is_indexed>
     <is_keyed>0</is_keyed>
     <is_multi_valued>0</is_multi_valued>
-    <is_required>0</is_required>
+    <is_required>1</is_required>
     <item_behavior>float</item_behavior>
-    <label xml:lang="en">Ext_Item</label>
+    <label xml:lang="en">Item</label>
+    <order_by>1</order_by>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
     <sort_order>10</sort_order>
     <source_id keyed_name="Ext_SetTabColor" type="ItemType" name="Ext_SetTabColor">020D603A122D4184859278F1308EABCA</source_id>
     <track_history>0</track_history>
     <name>ext_item</name>
+   </Item>
+   <Item type="Property" id="6FE0C0746D694BC3B2C2D24E65DEBF69" action="add">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="Ext_SetTabColor_behavior">B626F3FBC58E41BC9064E54C50C7082F</data_source>
+    <data_type>list</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <label xml:lang="en">Behavior</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="Ext_SetTabColor" type="ItemType" name="Ext_SetTabColor">020D603A122D4184859278F1308EABCA</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+    <name>ext_tab_behavior</name>
    </Item>
    <Item type="Property" id="E80EFA982EC24705BF8C27BF1E130604" action="add">
     <column_alignment>left</column_alignment>
@@ -48,7 +68,7 @@
     <is_keyed>0</is_keyed>
     <is_multi_valued>0</is_multi_valued>
     <is_required>0</is_required>
-    <label xml:lang="en">Ext_tab_color</label>
+    <label xml:lang="en">Tab Color</label>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
     <sort_order>30</sort_order>
@@ -65,6 +85,7 @@
     <is_keyed>0</is_keyed>
     <is_multi_valued>0</is_multi_valued>
     <is_required>0</is_required>
+    <label xml:lang="en">Font Color</label>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
     <sort_order>40</sort_order>
@@ -81,15 +102,36 @@
     <is_indexed>0</is_indexed>
     <is_keyed>0</is_keyed>
     <is_multi_valued>0</is_multi_valued>
-    <is_required>0</is_required>
+    <is_required>1</is_required>
     <item_behavior>float</item_behavior>
-    <label xml:lang="en">Ext_tab_name</label>
+    <keyed_name_order>1</keyed_name_order>
+    <label xml:lang="en">Tab Name</label>
+    <order_by>2</order_by>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
     <sort_order>20</sort_order>
     <source_id keyed_name="Ext_SetTabColor" type="ItemType" name="Ext_SetTabColor">020D603A122D4184859278F1308EABCA</source_id>
     <track_history>0</track_history>
     <name>ext_tab_name</name>
+   </Item>
+   <Item type="Property" id="71FC97578D75438D9FB6F67C14BE6F71" action="add">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="Ext_SetTabColor_style">4B01F1EE70324162A1DF1CEBEB121F05</data_source>
+    <data_type>list</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <label xml:lang="en">Style</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="Ext_SetTabColor" type="ItemType" name="Ext_SetTabColor">020D603A122D4184859278F1308EABCA</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+    <name>ext_tab_style</name>
    </Item>
    <Item type="View" id="7FA7FBC8FE1D4E2B90C718745684421B" action="add">
     <client>js</client>
